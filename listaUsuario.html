@@ -161,7 +161,7 @@
         }
 
         function getUsuarioById(id){
-            $.get("https://616c923737f997001745d6b6.mockapi.io/Usuario" + id, function (data) {
+            $.get("https://616c923737f997001745d6b6.mockapi.io/Usuario/" + id, function (data) {
                 $("#id").val(data.id);
                 $("#nome").val(data.Nome);
                 $("#email").val(data.Email);
@@ -182,7 +182,7 @@
 
         function deleteUsuario(id){
             $.ajax({
-                url : "https://616c923737f997001745d6b6.mockapi.io/Usuario" + id,
+                url : "https://616c923737f997001745d6b6.mockapi.io/Usuario/" + id,
                 method : "DELETE",
                 success : function(){
                     $.toast({text:"Excluído com sucesso!", bgColor : 'green', position:"top-right"});
@@ -196,7 +196,7 @@
         
         function putUsuario(id,form){
             $.ajax({
-                url : "https://616c923737f997001745d6b6.mockapi.io/Usuario" + id,
+                url : "https://616c923737f997001745d6b6.mockapi.io/Usuario/" + id,
                 method : "PUT",
                 data : form,
                 success : function(){

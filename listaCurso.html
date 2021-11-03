@@ -165,7 +165,7 @@
         }
 
         function getCursoById(id){
-            $.get("https://616c923737f997001745d6b6.mockapi.io/cursos" + id, function (data) {
+            $.get("https://616c923737f997001745d6b6.mockapi.io/cursos/" + id, function (data) {
                 $("#id").val(data.id);
                 $("#nome").val(data.Nome);
                 $("#descricao").val(data.Descricao);
@@ -187,7 +187,7 @@
 
         function deleteCurso(id){
             $.ajax({
-                url : "https://616c923737f997001745d6b6.mockapi.io/cursos" + id,
+                url : "https://616c923737f997001745d6b6.mockapi.io/cursos/" + id,
                 method : "DELETE",
                 success : function(){
                     $.toast({text:"Excluído com sucesso!", bgColor : 'green', position:"top-right"});
@@ -201,7 +201,7 @@
         
         function putCurso(id,form){
             $.ajax({
-                url : "https://616c923737f997001745d6b6.mockapi.io/cursos" + id,
+                url : "https://616c923737f997001745d6b6.mockapi.io/cursos/" + id,
                 method : "PUT",
                 data : form,
                 success : function(){
